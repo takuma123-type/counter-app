@@ -5,11 +5,11 @@ import styles from '@/styles/Home.module.css'
 import { useCallback, useEffect, useState } from 'react'
 
 export default function Home() {
-  const [foo, setFoo] = useState(10);
+  const [count, setCount] = useState(10);
 
 
 const handleClick  = (e) => {
-  setFoo(Foo => Foo + 1);
+  setCount(count => count + 1);
 };
 
 useEffect(() => {
@@ -26,7 +26,7 @@ useEffect(() => {
       <Head>
         <title>Index Page</title>
       </Head>
-      <h1>{foo}</h1>
+      <h1>{count}</h1>
       <button 
       href="/about"
       onClick={handleClick}
