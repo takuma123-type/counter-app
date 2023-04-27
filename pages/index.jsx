@@ -1,25 +1,25 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useCallback, useEffect, useState } from 'react'
 
 export default function Home() {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(1);
 
-
-const handleClick  = (e) => {
-  setCount(count => count + 1);
-};
+const handleClick = useCallback((e) => {
+  console.log(count)
+  if (count < 10) {
+    setCount(count => count + 1);
+  }
+}, [count]);
 
 useEffect(() => {
+  console.log(`マウント時: ${count}`)
   document.body.style.backgroundColor = "lightblue";
   return () => {
+    console.log(`マウント解除時: ${count}`)
     document.body.style.backgroundColor = "";
   };
 }, []);
-
-
 
   return (    
     <div class="wrap" className={styles.container}>
