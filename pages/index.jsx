@@ -5,12 +5,11 @@ import styles from '@/styles/Home.module.css'
 import { useCallback, useEffect, useState } from 'react'
 
 export default function Home() {
-  const [foo, setFoo] = useState(1);
+  const [foo, setFoo] = useState(10);
 
 
 const handleClick  = (e) => {
-  e.preventDefault();
-  setFoo(foo + 1);
+  setFoo(Foo => Foo + 1);
 };
 
 useEffect(() => {
