@@ -22,17 +22,19 @@ useEffect(() => {
 }, []);
 
   return (    
-    <div class="wrap" className={styles.container}>
-      <Head>
-        <title>Index Page</title>
-      </Head>
-      <h1>{count}</h1>
-      <button 
-      href="/about"
-      onClick={handleClick}
-        >
-          ボタン
-      </button>
+    <div className={styles.container}>
+      <div class="wrap">
+        <Head>
+          <title>Index Page</title>
+        </Head>
+        <h1>{count}</h1>
+        <button 
+        href="/about"
+        onClick={handleClick}
+          >
+            ボタン
+        </button>
+      </div>
     </div>
   )
 }
