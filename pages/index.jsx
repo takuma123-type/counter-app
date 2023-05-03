@@ -6,6 +6,7 @@ export default function Home() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([1,2,3]);
 
 const handleClick = useCallback((e) => {
   console.log(count)
@@ -49,6 +50,11 @@ useEffect(() => {
           type="text" 
           value={text} 
           onChange={handleChange} />
+        <ul>{array.map(item => {
+          return (
+            <div key={item}>{item}</div>
+          )
+        })}</ul>
       </div>
     </div>
   )
